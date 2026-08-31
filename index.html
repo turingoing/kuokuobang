@@ -84,6 +84,14 @@
             height: 80px;
             border-radius: 50%;
             background: #fff;
+            overflow: hidden;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
         }
         .card-header .username {
             font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -156,9 +164,9 @@
 
     <div class="profile-card">
         <div class="card-header">
-            <div class="avatar"></div>
-            <span class="username">李雷 的能力图</span>
-            <div class="change-avatar">更换头像<img src="img/kwx411.png"></div>
+            <div class="avatar"><img id="avatar" alt="头像"></div>
+            <span class="username"><span id="nickname">李雷</span> 的能力图</span>
+            <div class="change-avatar" id="change-avatar">更换头像<img src="img/kwx411.png"></div>
         </div>
 
         <div class="stats">
@@ -181,6 +189,7 @@
     </div>
 
 </div>
+<script src="main.js"></script>
     </body>
 </html>
 
