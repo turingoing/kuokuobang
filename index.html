@@ -19,17 +19,17 @@
         .header {
             display: flex;
             align-items: center;
-            padding-left: 20px;
-            padding-top: 20px;
+            padding-left: 24px;
+            padding-top: 24px;
 
         }
         .header img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
 
         .header p {
-            font-size: 24px;
+            font-size: 28px;
             color: #fff;
             margin: 0;
             margin-left: 8px;
@@ -38,23 +38,24 @@
         /* 主标题 */
         .slogan {
             font-family: "ZCOOL KuaiLe", "PingFang SC", "Microsoft YaHei", sans-serif;
-            font-size: 56px;
-            font-weight: 900;
+            font-size: 70px;
+            font-weight: 300;
             color: #fff;
             text-align: center;
             letter-spacing: 4px;
             text-shadow: 3px 3px 0 #2d55b8;
-            margin: 40px 0 24px;
+            margin: 40px 0 24px 50px;
         }
 
         /* 副标题：两端渐隐的渐变背景条 */
         .sub-slogan {
-            width: 420px;
+            width: 600px;
             margin: 0 auto;
             padding: 8px 0;
+            font-weight: bold;
             text-align: center;
             font-family: "PingFang SC", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
-            font-size: 20px;
+            font-size: 30px;
             color: #fff;
             letter-spacing: 2px;
             background: linear-gradient(90deg,
@@ -62,6 +63,84 @@
                 rgba(45,85,184,0.55) 30%,
                 rgba(45,85,184,0.55) 70%,
                 rgba(45,85,184,0) 100%);
+        }
+
+        /* 能力图浅色卡片 */
+        .profile-card {
+            width: 640px;
+            height: 400px;
+            box-sizing: border-box;
+            margin: 60px  50px;
+            padding: 30px 36px;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 24px;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        .card-header .username {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 34px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 16px;
+        }
+        .change-avatar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #2d3a8c;
+            cursor: pointer;
+        }
+        .change-avatar img {
+            width: 14px;
+            height: 14px;
+            margin-left: 6px;
+        }
+
+        /* 数据统计：数字 + 底座 + 文字 */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 24px;
+        }
+        .stat {
+            display: flex;
+            margin-top: 24px;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+        }
+        .stat .num {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #2d3a8c;
+            line-height: 1;
+            position: relative;
+            z-index: 1;
+            margin-bottom: -45px;
+        }
+        .stat .podium {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+        .stat .label {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 26px;
+            color: #2d3a8c;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -74,6 +153,32 @@
 
     <h1 class="slogan">有问题，找朋友 ！</h1>
     <p class="sub-slogan">真朋友，更愿意一起解决问题</p>
+
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="avatar"></div>
+            <span class="username">李雷 的能力图</span>
+            <div class="change-avatar">更换头像<img src="img/kwx411.png"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="num">10</div>
+                <img class="podium" src="img/kwx940.png">
+                <div class="label">可求助好友</div>
+            </div>
+            <div class="stat">
+                <div class="num">10</div>
+                <img class="podium" src="img/kwx940.png">
+                <div class="label">可提供帮助</div>
+            </div>
+            <div class="stat">
+                <div class="num">0</div>
+                <img class="podium" src="img/kwx940.png">
+                <div class="label">获得点赞</div>
+            </div>
+        </div>
+    </div>
 
 </div>
     </body>
